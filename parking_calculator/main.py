@@ -72,7 +72,7 @@ def process_file(input_path: str) -> list[str]:
 def main():
     output_lines = process_file("input.txt")
     Path("dij.txt").write_text("\n".join(output_lines), encoding="utf-8")
-    print("RENDSZÁM\tDÍJ")
+    print("RENDSZAM\tDIJ")
     print("\n".join(output_lines))
 
 
