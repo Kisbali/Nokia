@@ -70,19 +70,21 @@ def handle_adapter_block(lines, i, n):
 
     parsed = parse_block(block)
 
-    full = {}
+    data = {"adapter_name": name.replace(":", "")}
+
     for key in allowed:
         if key in parsed:
-            full[key] = parsed[key]
+            data[key] = parsed[key]
         else:
             if key in ("dns_servers", "default_gateway"):
-                full[key] = []
+                data[key] = []
             else:
-                full[key] = ""
+                data[key] = ""
 
-    data = {"adapter_name": name.replace(":", "")}
-    data.update(full)
     return i, data
+
+
+
 
 
 
@@ -94,7 +96,7 @@ def read_block(lines, i, n):
     return block, i + 1
 
 
-allowed = {
+allowed = [
     "description",
     "physical_address",
     "dhcp_enabled",
@@ -102,7 +104,7 @@ allowed = {
     "subnet_mask",
     "default_gateway",
     "dns_servers"
-}
+]
 
 
 def parse_block(lines):
