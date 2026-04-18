@@ -161,7 +161,7 @@ def main():
 
     write_output_json(output)
 
-    for path in sorted(Path(".").glob("*.json")):
+    for path in sorted(Path(".").glob("*.txt")):
         print(path.name)
 
 
