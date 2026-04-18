@@ -4,92 +4,44 @@
     "adapters": [
       {
         "adapter_name": "Ethernet adapter Ethernet 2",
-        "physical_address": "",
-        "dns_servers": "",
         "ipv4_address": "192.168.0.10",
+        "subnet_mask": "",
         "default_gateway": [
           "fe80::ab52:9c21:fabe:3e44%3",
           "192.168.0.1",
           "127.0.0.1"
-        ],
-        "dhcp_enabled": "",
-        "description": "",
-        "subnet_mask": ""
+        ]
       },
       {
         "adapter_name": "Ethernet adapter Ethernet 3",
-        "physical_address": "",
-        "dns_servers": "",
         "ipv4_address": "192.168.0.10",
+        "subnet_mask": "255.255.255.0",
         "default_gateway": [
           "fe80::ab52:9c21:fabe:3e44%3",
           "192.168.0.1"
-        ],
-        "dhcp_enabled": "",
-        "description": "",
-        "subnet_mask": "255.255.255.0"
+        ]
       },
       {
         "adapter_name": "Ethernet adapter Ethernet 5",
-        "physical_address": "",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": [],
-        "dhcp_enabled": "",
-        "description": "",
-        "subnet_mask": "255.255.0.0"
+        "subnet_mask": "255.255.0.0",
+        "default_gateway": []
       },
       {
-        "adapter_name": "Wireless LAN adapter Local Area Connection* 1",
-        "physical_address": "",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": "",
-        "dhcp_enabled": "",
-        "description": "",
-        "subnet_mask": ""
+        "adapter_name": "Wireless LAN adapter Local Area Connection* 1"
       },
       {
-        "adapter_name": "Wireless LAN adapter Local Area Connection* 2",
-        "physical_address": "",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": "",
-        "dhcp_enabled": "",
-        "description": "",
-        "subnet_mask": ""
+        "adapter_name": "Wireless LAN adapter Local Area Connection* 2"
       },
       {
-        "adapter_name": "Wireless LAN adapter Wi-Fi",
-        "physical_address": "",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": "",
-        "dhcp_enabled": "",
-        "description": "",
-        "subnet_mask": ""
+        "adapter_name": "Wireless LAN adapter Wi-Fi"
       },
       {
-        "adapter_name": "Ethernet adapter Bluetooth Network Connection",
-        "physical_address": "",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": "",
-        "dhcp_enabled": "",
-        "description": "",
-        "subnet_mask": ""
+        "adapter_name": "Ethernet adapter Bluetooth Network Connection"
       }
     ],
     "configs": [
       {
-        "configuration_name": "Windows IP Configuration",
-        "physical_address": "",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": "",
-        "dhcp_enabled": "",
-        "description": "",
-        "subnet_mask": ""
+        "configuration_name": "Windows IP Configuration"
       }
     ]
   },
@@ -98,91 +50,68 @@
     "adapters": [
       {
         "adapter_name": "Ethernet adapter Ethernet 2",
-        "physical_address": "E1-17-17-17-17-E1",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": "",
-        "dhcp_enabled": "Yes",
         "description": "Intel(R) Ethernet Connection (16) I219-LM",
-        "subnet_mask": ""
+        "physical_address": "E1-17-17-17-17-E1",
+        "dhcp_enabled": "Yes"
       },
       {
         "adapter_name": "Ethernet adapter Ethernet 3",
+        "description": "USB Ethernet",
         "physical_address": "E1-17-17-17-17-E1",
-        "dns_servers": [
-          "192.168.0.1",
-          "fd58:43b2:11a9:0000:0000:0000:0000:0002"
-        ],
+        "dhcp_enabled": "Yes",
         "ipv4_address": "192.168.0.10",
+        "subnet_mask": "255.255.255.0",
         "default_gateway": [
           "fe80::ab52:9c21:fabe:3e44%3",
           "192.168.0.1"
         ],
-        "dhcp_enabled": "Yes",
-        "description": "USB Ethernet",
-        "subnet_mask": "255.255.255.0"
+        "dns_servers": [
+          "192.168.0.1",
+          "fd58:43b2:11a9:0000:0000:0000:0000:0002"
+        ]
       },
       {
         "adapter_name": "Ethernet adapter Ethernet 5",
-        "physical_address": "71-C7-C7-C7-C7-71",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": [],
-        "dhcp_enabled": "Yes",
         "description": "Realtek USB GbE Family Controller",
-        "subnet_mask": "255.255.0.0"
+        "physical_address": "71-C7-C7-C7-C7-71",
+        "dhcp_enabled": "Yes",
+        "subnet_mask": "255.255.0.0",
+        "default_gateway": []
       },
       {
         "adapter_name": "Wireless LAN adapter Local Area Connection* 1",
-        "physical_address": "4F:4F:89:89:EE:EE",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": "",
-        "dhcp_enabled": "Yes",
         "description": "Microsoft Wi-Fi Direct Virtual Adapter",
-        "subnet_mask": ""
+        "physical_address": "4F:4F:89:89:EE:EE",
+        "dhcp_enabled": "Yes"
       },
       {
         "adapter_name": "Wireless LAN adapter Local Area Connection* 2",
-        "physical_address": "d4-d4-11-11-ab-ab",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": "",
-        "dhcp_enabled": "No",
         "description": "Microsoft Wi-Fi Direct Virtual Adapter #2",
-        "subnet_mask": ""
+        "physical_address": "d4-d4-11-11-ab-ab",
+        "dhcp_enabled": "No"
       },
       {
         "adapter_name": "Wireless LAN adapter Wi-Fi",
-        "physical_address": "0C:0C:F2:F2:57:57",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": "",
-        "dhcp_enabled": "Yes",
         "description": "Intel(R) Wi-Fi 6E AX211 160MHz",
-        "subnet_mask": ""
+        "physical_address": "0C:0C:F2:F2:57:57",
+        "dhcp_enabled": "Yes"
       },
       {
         "adapter_name": "Ethernet adapter Bluetooth Network Connection",
-        "physical_address": "A1-A1-B2-B2-C3-C3",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": "",
-        "dhcp_enabled": "Yes",
         "description": "Bluetooth Device (Personal Area Network)",
-        "subnet_mask": ""
+        "physical_address": "A1-A1-B2-B2-C3-C3",
+        "dhcp_enabled": "Yes"
       }
     ],
     "configs": [
       {
         "configuration_name": "Windows IP Configuration",
-        "physical_address": "",
-        "dns_servers": "",
-        "ipv4_address": "",
-        "default_gateway": "",
-        "dhcp_enabled": "",
-        "description": "",
-        "subnet_mask": ""
+        "host_name": "Nebuchadnezzar",
+        "primary_dns_suffix": "",
+        "node_type": "Hybrid",
+        "ip_routing_enabled": "No",
+        "wins_proxy_enabled": "No",
+        "dns_suffix_search_list": "babylon.net"
       }
     ]
   }

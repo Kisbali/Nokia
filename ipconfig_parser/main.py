@@ -9,16 +9,17 @@ def clean_key(key):
     key = key.replace("-", "_")
     return key
 
+
 def clean_value(value):
     value = value.replace("(Preferred)", "")
     value = value.replace("(Deprecated)", "")
     value = value.replace("(Deferred)", "")
     return value.strip()
 
+
 def parse_line_to_key_value(line: str):
     if ":" not in line:
         return None, line.strip()
-    
     left, right = line.split(":", 1)
     key = clean_key(left)
     value = right.strip()
@@ -66,8 +67,13 @@ def handle_adapter_block(lines, i, n):
     name = lines[i].strip()
     i += 2
     block, i = read_block(lines, i, n)
+
+    parsed = parse_block(block)
+
+    filtered = {k: v for k, v in parsed.items() if k in allowed}
+
     data = {"adapter_name": name.replace(":", "")}
-    data.update(parse_block(block))
+    data.update(filtered)
     return i, data
 
 
@@ -77,6 +83,17 @@ def read_block(lines, i, n):
         block.append(lines[i])
         i += 1
     return block, i + 1
+
+
+allowed = {
+    "description",
+    "physical_address",
+    "dhcp_enabled",
+    "ipv4_address",
+    "subnet_mask",
+    "default_gateway",
+    "dns_servers"
+}
 
 
 def parse_block(lines):
@@ -93,17 +110,7 @@ def parse_block(lines):
         if current_key:
             process_continuation_line(stripped, current_key, data)
 
-    allowed = {
-        "description",
-        "physical_address",
-        "dhcp_enabled",
-        "ipv4_address",
-        "subnet_mask",
-        "default_gateway",
-        "dns_servers"
-    }
-
-    return {k: data.get(k, "") for k in allowed}
+    return data
 
 
 def is_key_value_line(line):
@@ -119,9 +126,9 @@ def process_key_value_line(line, data):
     value = clean_value(right)
 
     if key in ("dns_servers", "default_gateway"):
-        data[key] = value.split()
+        data[key] = value.split() if value else []
     else:
-        data[key] = value
+        data[key] = value if value else ""
 
     return key
 
@@ -155,12 +162,14 @@ def parse_file(path):
 def write_output_json(result, filename="output.json"):
     Path(filename).write_text(
         json.dumps(result, indent=2, ensure_ascii=False),
-        encoding="utf-8")
+        encoding="utf-8"
+    )
 
 
 def main():
     files = sorted(
-        [p for p in Path(".").iterdir() if p.suffix.lower() in {".txt", ".log"}])
+        [p for p in Path(".").iterdir() if p.suffix.lower() in {".txt", ".log"}]
+    )
 
     output = []
 
@@ -170,7 +179,8 @@ def main():
 
     write_output_json(output)
 
-    print(json.dumps(output, indent=4, ensure_ascii=False))
+    for path in sorted(Path(".").glob("*.txt")):
+        print(path.name)
 
 
 if __name__ == "__main__":
