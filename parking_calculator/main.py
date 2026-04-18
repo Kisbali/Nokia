@@ -66,7 +66,7 @@ def process_line(line: str) -> str:
 
         fee = calculate_parking_fee(entry, exit_)
 
-        return f"{plate}  {fee}"
+        return f"{plate}\t\t{fee}"
 
     except Exception as e:
         return f"Hiba a sor feldolgozásakor: {line}  ({e})"
@@ -83,6 +83,7 @@ def main():
             output_lines.append(result)
 
     Path("dij.txt").write_text("\n".join(output_lines), encoding="utf-8")
+    print("RENDSZÁM\tDÍJ")
     print("\n".join(output_lines))
     
 
