@@ -103,7 +103,8 @@ def parse_block(lines):
         "dns_servers"
     }
 
-    return {k: data.get(k, "") for k in allowed}
+    return {k: data[k] for k in allowed if k in data}
+
 
 
 def is_key_value_line(line):
