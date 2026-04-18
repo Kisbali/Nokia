@@ -11,9 +11,9 @@ def clean_key(key):
 
 
 def clean_value(value):
-    value = value.replace("(Preferred)", "")
-    value = value.replace("(Deprecated)", "")
-    value = value.replace("(Deferred)", "")
+    value = value
+    value = value
+    value = value
     return value.strip()
 
 
