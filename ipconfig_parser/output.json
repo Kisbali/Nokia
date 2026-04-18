@@ -4,12 +4,12 @@
     "adapters": [
       {
         "adapter_name": "Ethernet adapter Ethernet 2:",
-        "connection_specific_dns_suffix": "task.hackathlon.edu",
-        "ipv6_address": "",
-        "temporary_ipv6_address": "fd58:43b2:11a9::1",
-        "link_local_ipv6_address": "fe80::9c21:ef74:66af:120d%3",
-        "ipv4_address": "192.168.0.10",
+        "dhcp_enabled": "",
+        "physical_address": "",
+        "dns_servers": "",
+        "description": "",
         "subnet_mask": "",
+        "ipv4_address": "192.168.0.10",
         "default_gateway": [
           "fe80::ab52:9c21:fabe:3e44%3",
           "192.168.0.1",
@@ -18,12 +18,12 @@
       },
       {
         "adapter_name": "Ethernet adapter Ethernet 3:",
-        "connection_specific_dns_suffix": "",
-        "ipv6_address": "fd58:43b2:11a9:0000:0000:0000:0000:0001",
-        "temporary_ipv6_address": "fd58:43b2:11a9::1",
-        "link_local_ipv6_address": "fe80::9c21:ef74:66af:120d%3",
-        "ipv4_address": "192.168.0.10",
+        "dhcp_enabled": "",
+        "physical_address": "",
+        "dns_servers": "",
+        "description": "",
         "subnet_mask": "255.255.255.0",
+        "ipv4_address": "192.168.0.10",
         "default_gateway": [
           "fe80::ab52:9c21:fabe:3e44%3",
           "192.168.0.1"
@@ -31,36 +31,65 @@
       },
       {
         "adapter_name": "Ethernet adapter Ethernet 5:",
-        "connection_specific_dns_suffix": "",
-        "link_local_ipv6_address": "fe80::ef74:6a6d:9c21:c312%15",
-        "autoconfiguration_ipv4_address": "192.168.10.1",
+        "dhcp_enabled": "",
+        "physical_address": "",
+        "dns_servers": "",
+        "description": "",
         "subnet_mask": "255.255.0.0",
+        "ipv4_address": "",
         "default_gateway": []
       },
       {
         "adapter_name": "Wireless LAN adapter Local Area Connection* 1:",
-        "media_state": "Media disconnected",
-        "connection_specific_dns_suffix": ""
+        "dhcp_enabled": "",
+        "physical_address": "",
+        "dns_servers": "",
+        "description": "",
+        "subnet_mask": "",
+        "ipv4_address": "",
+        "default_gateway": ""
       },
       {
         "adapter_name": "Wireless LAN adapter Local Area Connection* 2:",
-        "media_state": "Media disconnected",
-        "connection_specific_dns_suffix": ""
+        "dhcp_enabled": "",
+        "physical_address": "",
+        "dns_servers": "",
+        "description": "",
+        "subnet_mask": "",
+        "ipv4_address": "",
+        "default_gateway": ""
       },
       {
         "adapter_name": "Wireless LAN adapter Wi-Fi:",
-        "media_state": "Media disconnected",
-        "connection_specific_dns_suffix": ""
+        "dhcp_enabled": "",
+        "physical_address": "",
+        "dns_servers": "",
+        "description": "",
+        "subnet_mask": "",
+        "ipv4_address": "",
+        "default_gateway": ""
       },
       {
         "adapter_name": "Ethernet adapter Bluetooth Network Connection:",
-        "media_state": "Media disconnected",
-        "connection_specific_dns_suffix": ""
+        "dhcp_enabled": "",
+        "physical_address": "",
+        "dns_servers": "",
+        "description": "",
+        "subnet_mask": "",
+        "ipv4_address": "",
+        "default_gateway": ""
       }
     ],
     "configs": [
       {
-        "configuration_name": "Windows IP Configuration"
+        "configuration_name": "Windows IP Configuration",
+        "dhcp_enabled": "",
+        "physical_address": "",
+        "dns_servers": "",
+        "description": "",
+        "subnet_mask": "",
+        "ipv4_address": "",
+        "default_gateway": ""
       }
     ]
   },
@@ -69,101 +98,91 @@
     "adapters": [
       {
         "adapter_name": "Ethernet adapter Ethernet 2:",
-        "media_state": "Media disconnected",
-        "connection_specific_dns_suffix": "",
-        "description": "Intel(R) Ethernet Connection (16) I219-LM",
-        "physical_address": "E1-17-17-17-17-E1",
         "dhcp_enabled": "Yes",
-        "autoconfiguration_enabled": "Yes"
+        "physical_address": "E1-17-17-17-17-E1",
+        "dns_servers": "",
+        "description": "Intel(R) Ethernet Connection (16) I219-LM",
+        "subnet_mask": "",
+        "ipv4_address": "",
+        "default_gateway": ""
       },
       {
         "adapter_name": "Ethernet adapter Ethernet 3:",
-        "connection_specific_dns_suffix": "",
-        "description": "USB Ethernet",
-        "physical_address": "E1-17-17-17-17-E1",
         "dhcp_enabled": "Yes",
-        "autoconfiguration_enabled": "Yes",
-        "ipv6_address": "fd58:43b2:11a9:0000:0000:0000:0000:0001",
-        "temporary_ipv6_address": "fd58:43b2:11a9:0000:0000:0000:0000:0010",
-        "link_local_ipv6_address": "fe80::9c21:ef74:66af:120d%3",
-        "ipv4_address": "192.168.0.10",
-        "subnet_mask": "255.255.255.0",
-        "lease_obtained": "2026. március 31., kedd 10:40:50",
-        "lease_expires": "2026. április 7., kedd 10:40:50",
-        "default_gateway": [
-          "fe80::ab52:9c21:fabe:3e44%3",
-          "192.168.0.1"
-        ],
-        "dhcp_server": "192.168.0.1",
-        "dhcpv6_iaid": "123456789",
-        "dhcpv6_client_duid": "00-01-03-05-07-09-0B-0E-10-18-1F-35-73-A6",
+        "physical_address": "E1-17-17-17-17-E1",
         "dns_servers": [
           "192.168.0.1",
           "fd58:43b2:11a9:0000:0000:0000:0000:0002"
         ],
-        "netbios_over_tcpip": "Enabled"
+        "description": "USB Ethernet",
+        "subnet_mask": "255.255.255.0",
+        "ipv4_address": "192.168.0.10",
+        "default_gateway": [
+          "fe80::ab52:9c21:fabe:3e44%3",
+          "192.168.0.1"
+        ]
       },
       {
         "adapter_name": "Ethernet adapter Ethernet 5:",
-        "connection_specific_dns_suffix": "",
-        "description": "Realtek USB GbE Family Controller",
-        "physical_address": "71-C7-C7-C7-C7-71",
         "dhcp_enabled": "Yes",
-        "autoconfiguration_enabled": "Yes",
-        "link_local_ipv6_address": "fe80::ef74:6a6d:9c21:c312%15",
-        "autoconfiguration_ipv4_address": "192.168.10.1",
+        "physical_address": "71-C7-C7-C7-C7-71",
+        "dns_servers": "",
+        "description": "Realtek USB GbE Family Controller",
         "subnet_mask": "255.255.0.0",
-        "default_gateway": [],
-        "dhcpv6_iaid": "657726242",
-        "dhcpv6_client_duid": "00-01-00-01-2C-0F-2C-0F-E8-80-E8-80-83-83",
-        "netbios_over_tcpip": "Enabled"
+        "ipv4_address": "",
+        "default_gateway": []
       },
       {
         "adapter_name": "Wireless LAN adapter Local Area Connection* 1:",
-        "media_state": "Media disconnected",
-        "connection_specific_dns_suffix": "",
-        "description": "Microsoft Wi-Fi Direct Virtual Adapter",
-        "physical_address": "4F:4F:89:89:EE:EE",
         "dhcp_enabled": "Yes",
-        "autoconfiguration_enabled": "Yes"
+        "physical_address": "4F:4F:89:89:EE:EE",
+        "dns_servers": "",
+        "description": "Microsoft Wi-Fi Direct Virtual Adapter",
+        "subnet_mask": "",
+        "ipv4_address": "",
+        "default_gateway": ""
       },
       {
         "adapter_name": "Wireless LAN adapter Local Area Connection* 2:",
-        "media_state": "Media disconnected",
-        "connection_specific_dns_suffix": "",
-        "description": "Microsoft Wi-Fi Direct Virtual Adapter #2",
-        "physical_address": "d4-d4-11-11-ab-ab",
         "dhcp_enabled": "No",
-        "autoconfiguration_enabled": "Yes"
+        "physical_address": "d4-d4-11-11-ab-ab",
+        "dns_servers": "",
+        "description": "Microsoft Wi-Fi Direct Virtual Adapter #2",
+        "subnet_mask": "",
+        "ipv4_address": "",
+        "default_gateway": ""
       },
       {
         "adapter_name": "Wireless LAN adapter Wi-Fi:",
-        "media_state": "Media disconnected",
-        "connection_specific_dns_suffix": "",
-        "description": "Intel(R) Wi-Fi 6E AX211 160MHz",
-        "physical_address": "0C:0C:F2:F2:57:57",
         "dhcp_enabled": "Yes",
-        "autoconfiguration_enabled": "Yes"
+        "physical_address": "0C:0C:F2:F2:57:57",
+        "dns_servers": "",
+        "description": "Intel(R) Wi-Fi 6E AX211 160MHz",
+        "subnet_mask": "",
+        "ipv4_address": "",
+        "default_gateway": ""
       },
       {
         "adapter_name": "Ethernet adapter Bluetooth Network Connection:",
-        "media_state": "Media disconnected",
-        "connection_specific_dns_suffix": "",
-        "description": "Bluetooth Device (Personal Area Network)",
-        "physical_address": "A1-A1-B2-B2-C3-C3",
         "dhcp_enabled": "Yes",
-        "autoconfiguration_enabled": "Yes"
+        "physical_address": "A1-A1-B2-B2-C3-C3",
+        "dns_servers": "",
+        "description": "Bluetooth Device (Personal Area Network)",
+        "subnet_mask": "",
+        "ipv4_address": "",
+        "default_gateway": ""
       }
     ],
     "configs": [
       {
         "configuration_name": "Windows IP Configuration",
-        "host_name": "Nebuchadnezzar",
-        "primary_dns_suffix": "",
-        "node_type": "Hybrid",
-        "ip_routing_enabled": "No",
-        "wins_proxy_enabled": "No",
-        "dns_suffix_search_list": "babylon.net"
+        "dhcp_enabled": "",
+        "physical_address": "",
+        "dns_servers": "",
+        "description": "",
+        "subnet_mask": "",
+        "ipv4_address": "",
+        "default_gateway": ""
       }
     ]
   }

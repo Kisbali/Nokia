@@ -93,7 +93,17 @@ def parse_block(lines):
         if current_key:
             process_continuation_line(stripped, current_key, data)
 
-    return data
+    allowed = {
+        "description",
+        "physical_address",
+        "dhcp_enabled",
+        "ipv4_address",
+        "subnet_mask",
+        "default_gateway",
+        "dns_servers"
+    }
+
+    return {k: data.get(k, "") for k in allowed}
 
 
 def is_key_value_line(line):
