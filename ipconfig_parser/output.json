@@ -1,6 +1,6 @@
 [
   {
-    "file_name": "parser_input_a.txt",
+    "file_name": "ipconfig.log",
     "adapters": [
       {
         "adapter_name": "Ethernet adapter Ethernet 2",
@@ -14,7 +14,7 @@
       },
       {
         "adapter_name": "Ethernet adapter Ethernet 3",
-        "ipv4_address": "192.168.0.10",
+        "ipv4_address": "192.168.0.10(Deferred)",
         "subnet_mask": "255.255.255.0",
         "default_gateway": [
           "fe80::ab52:9c21:fabe:3e44%3",
@@ -38,15 +38,10 @@
       {
         "adapter_name": "Ethernet adapter Bluetooth Network Connection"
       }
-    ],
-    "configs": [
-      {
-        "configuration_name": "Windows IP Configuration"
-      }
     ]
   },
   {
-    "file_name": "parser_input_b.txt",
+    "file_name": "ipconfig.log",
     "adapters": [
       {
         "adapter_name": "Ethernet adapter Ethernet 2",
@@ -59,7 +54,7 @@
         "description": "USB Ethernet",
         "physical_address": "E1-17-17-17-17-E1",
         "dhcp_enabled": "Yes",
-        "ipv4_address": "192.168.0.10",
+        "ipv4_address": "192.168.0.10(Preferred)",
         "subnet_mask": "255.255.255.0",
         "default_gateway": [
           "fe80::ab52:9c21:fabe:3e44%3",
@@ -101,17 +96,6 @@
         "description": "Bluetooth Device (Personal Area Network)",
         "physical_address": "A1-A1-B2-B2-C3-C3",
         "dhcp_enabled": "Yes"
-      }
-    ],
-    "configs": [
-      {
-        "configuration_name": "Windows IP Configuration",
-        "host_name": "Nebuchadnezzar",
-        "primary_dns_suffix": "",
-        "node_type": "Hybrid",
-        "ip_routing_enabled": "No",
-        "wins_proxy_enabled": "No",
-        "dns_suffix_search_list": "babylon.net"
       }
     ]
   }

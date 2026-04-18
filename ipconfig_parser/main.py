@@ -11,9 +11,9 @@ def clean_key(key):
 
 
 def clean_value(value):
-    value = value
-    value = value
-    value = value
+    value = value.replace("(Preferred)", "")
+    value = value.replace("(Deprecated)", "")
+    value = value.replace("(Deferred)", "")
     return value.strip()
 
 
@@ -70,11 +70,20 @@ def handle_adapter_block(lines, i, n):
 
     parsed = parse_block(block)
 
-    filtered = {k: v for k, v in parsed.items() if k in allowed}
+    full = {}
+    for key in allowed:
+        if key in parsed:
+            full[key] = parsed[key]
+        else:
+            if key in ("dns_servers", "default_gateway"):
+                full[key] = []
+            else:
+                full[key] = ""
 
     data = {"adapter_name": name.replace(":", "")}
-    data.update(filtered)
+    data.update(full)
     return i, data
+
 
 
 def read_block(lines, i, n):
