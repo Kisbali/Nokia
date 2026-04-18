@@ -83,7 +83,6 @@ def main():
             output_lines.append(result)
 
     Path("dij.txt").write_text("\n".join(output_lines), encoding="utf-8")
-    print("RENDSZÁM DÍJ")
     print("\n".join(output_lines))
     
 
