@@ -66,7 +66,7 @@ def handle_adapter_block(lines, i, n):
     name = lines[i].strip()
     i += 2
     block, i = read_block(lines, i, n)
-    data = {"adapter_name": name}
+    data = {"adapter_name": name.replace(":", "")}
     data.update(parse_block(block))
     return i, data
 
