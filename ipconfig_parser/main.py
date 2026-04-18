@@ -153,7 +153,7 @@ def parse_file(path):
     adapters, configs = parse_ipconfig(lines)
 
     return {
-        "file_name": path.name,
+        "file_name": "ipconfig.log",
         "adapters": adapters,
         "configs": configs
     }
