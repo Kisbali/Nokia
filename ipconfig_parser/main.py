@@ -179,8 +179,7 @@ def main():
 
     write_output_json(output)
 
-    for path in sorted(Path(".").glob("*.txt")):
-        print(path.name)
+    print(json.dumps(output, indent=4, ensure_ascii=False))
 
 
 if __name__ == "__main__":
