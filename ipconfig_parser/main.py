@@ -145,8 +145,7 @@ def parse_file(path):
 def write_output_json(result, filename="output.json"):
     Path(filename).write_text(
         json.dumps(result, indent=2, ensure_ascii=False),
-        encoding="utf-8"
-    )
+        encoding="utf-8")
 
 
 def main():
@@ -161,8 +160,7 @@ def main():
 
     write_output_json(output)
 
-    for path in sorted(Path(".").glob("*.txt")):
-        print(path.name)
+    print(json.dumps(output, indent=4, ensure_ascii=False))
 
 
 if __name__ == "__main__":
