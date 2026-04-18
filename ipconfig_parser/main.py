@@ -155,7 +155,6 @@ def parse_file(path):
     return {
         "file_name": "ipconfig.log",
         "adapters": adapters,
-        "configs": configs
     }
 
 
