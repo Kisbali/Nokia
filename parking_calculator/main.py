@@ -12,17 +12,16 @@ def parse_datetime(dt: str) -> datetime:
     raise ValueError("Hibás dátumformátum! Használd: YYYY-MM-DD HH:MM[:SS]")
 
 
-def fee_under_24_minutes(total_minutes: int) -> int:
+def fee_under_24_hours(total_minutes: int) -> int:
     if total_minutes <= 30:
         return 0
     remaining = total_minutes - 30
+    remaining_hours = math.ceil(remaining/60)
     fee = 0
-    first_period = min(remaining, 180)
-    first_hours = math.ceil(first_period / 60)
+    first_hours = min(remaining_hours, 3)
     fee += first_hours * 300
-    if remaining > 180:
-        extra = remaining - 180
-        extra_hours = math.ceil(extra / 60)
+    if remaining_hours > 3:
+        extra_hours = remaining_hours - 3
         fee += extra_hours * 500
     return fee
 
@@ -33,13 +32,13 @@ def calculate_parking_fee(entry_time: str, exit_time: str) -> int:
     if end < start:
         raise ValueError("A kilépési idő nem lehet korábbi, mint a belépési idő!")
     total_minutes = math.ceil((end - start).total_seconds() / 60)
-    if total_minutes <= 24 * 60:
-        return min(fee_under_24_minutes(total_minutes), 10000)
+    if total_minutes < 1440:
+        return min(fee_under_24_hours(total_minutes), 10000)
     full_days = total_minutes // (24 * 60)
-    remainder = total_minutes % (24 * 60)
+    remainer = total_minutes % (24 * 60)
     fee = full_days * 10000
-    if remainder > 0:
-        fee += min(fee_under_24_minutes(remainder), 10000)
+    if remainer > 0:
+        fee += fee_under_24_hours(remainer)
     return fee
 
 
